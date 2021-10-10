@@ -9,6 +9,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 import com.app.show.Book;
+//import com.app.domain.Book;
 import java.util.*;
 
 import org.codehaus.jackson.JsonGenerationException;
@@ -33,6 +34,8 @@ public class HomeController {
     //@CrossOrigin  //com.app.show.Book
     public ResponseEntity<com.app.domain.Book> createBook(@RequestBody Book book) {
           ObjectMapper mapper = new ObjectMapper();
+       com.app.domain.Book bbbbk=new com.app.domain.Book();
+
          // Book bbk= book;
         Book bbk= book;
         System.out.println("Hello My Json Book: "+book.toString());
